@@ -4,11 +4,61 @@
 	<title>popup页</title>
 	<meta charset="utf-8"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;overflow-x: hidden;
+		}
+		#app {
+			width: 250px;
+			height: 100px;
+			background-color: #32b16c;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.switch-component {
+			background-color: #fff;
+			width: 80px;
+			height: 40px;
+			border-radius: 20px;
+			appearance: none;
+			outline: none;
+			position: relative;
+			transition: all .3s;
+		}
+		.switch-component::before {
+			position: absolute;
+			left: 3px;
+			top: 3px;
+			content: '';
+			width: 28px;
+			height: 28px;
+			border-radius: 50%;
+			background-color: #f94d4b;
+			transition: all .3s;
+			border: 3px solid #ddd;
+			box-shadow: 0 0 8px #eee;
+		}
+
+		.switch-component:checked::before {
+			left: 43px;
+			background-color: #32b16c;
+		}
+		#bottom {
+			text-align: center;
+			font-size: 20px;
+			color: #666;
+			padding: 10px;
+		}
 	</style>
 </head>
 <body>
-	<h1>这是一个popup页面！</h1>
-	<input type="checkbox" id="switch"/>
+	<div id="app">
+		<input class="switch-component" type="checkbox" id="switch"/>
+	</div>
+	<div id="bottom">Options</div>
 	<script type="text/javascript" src="js/popup.js"></script>
 </body>
 </html>
