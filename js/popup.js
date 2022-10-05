@@ -49,12 +49,12 @@ switchNode.addEventListener("click", function () {
     isOpenDiplayMode = 1;
     getCurrentTabId((tabId) => {
       chrome.scripting.insertCSS({
-				target: {
-					tabId,
-					allFrames: true
-				},
-				files: ["css/main.css"]
-   		});
-		})
-	}
+        target: {
+          tabId,
+          allFrames: true
+        },
+        files: ["css/main.css"]
+      });
+    })
+  }
 });
