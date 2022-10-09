@@ -4,20 +4,31 @@
 	<title>popup页</title>
 	<meta charset="utf-8"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="css/base.css">
 	<style>
 		* {
 			margin: 0;
 			padding: 0;
 			box-sizing: border-box;overflow-x: hidden;
 		}
+		#name {
+			color: #fff;
+			font-size: 20px;
+			background-color: #32b16c;
+			font-weight: 600;
+			text-align: center;
+			padding: 10px;
+			padding-bottom: 0;
+		}
 		#app {
-			width: 250px;
+			width: 350px;
 			height: 100px;
 			background-color: #32b16c;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 		}
+
 		.switch-component {
 			background-color: #fff;
 			width: 80px;
@@ -33,8 +44,8 @@
 			left: 3px;
 			top: 3px;
 			content: '';
-			width: 28px;
-			height: 28px;
+			width: 34px;
+			height: 34px;
 			border-radius: 50%;
 			background-color: #f94d4b;
 			transition: all .3s;
@@ -47,18 +58,40 @@
 			background-color: #32b16c;
 		}
 		#bottom {
-			text-align: center;
-			font-size: 20px;
 			color: #666;
 			padding: 10px;
+		}
+		#tag {
+			width: 100px;
+		}
+		input[type='submit'],form,fieldset {
+			margin-bottom: 0 !important;
+		}
+		textarea {
+			resize: none
 		}
 	</style>
 </head>
 <body>
+	<div id="name">Display Tag <sub>v1.1.0</sub></div>
 	<div id="app">
 		<input class="switch-component" type="checkbox" id="switch"/>
 	</div>
-	<div id="bottom">Options</div>
+	<div id="bottom">
+		<form>
+			<fieldset>
+				<label for="ageRangeField">Border</label>
+				<select id="ageRangeField">
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</select>
+				<label for="commentField">Excluded tags</label>
+				<textarea placeholder="p,div,a" id="commentField"></textarea>
+				<input class="button-primary float-right button-outline" type="submit" value="Save">
+			</fieldset>
+		</form>
+		
+	</div>
 	<script type="text/javascript" src="js/popup.js"></script>
 </body>
 </html>
