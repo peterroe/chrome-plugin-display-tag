@@ -10,7 +10,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
     sendResponse();
   } else {
     sendResponse(
-      document.querySelector('.display-tag') ? 1 : 0
+      document.querySelector(value) ? 1 : 0
     )
   }
 });

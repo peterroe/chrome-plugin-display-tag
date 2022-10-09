@@ -16,4 +16,4 @@ list = a abbr acronym address applet area article aside audio b base basefont bd
 
 .display-border
     *::before, *::after
-        border none
+        border none !important;

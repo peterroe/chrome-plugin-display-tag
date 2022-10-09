@@ -14,9 +14,9 @@ function sendMessageToContentScript(message, callback) {
   });
 }
 
-function getCurrentMode() {
+function getCurrentMode(value) {
   return new Promise((resolve) => {
-    sendMessageToContentScript({ cmd: "getCurrentMode" }, function (response) {
+    sendMessageToContentScript({ cmd: "getCurrentMode", value }, function (response) {
       resolve(response);
     });
   });
@@ -37,9 +37,17 @@ let isOpenDiplayMode;
 
 const tags = ['div', 'span', 'a']
 
-let initState = ['','','']
+let initState = ['', '', '']
 
-getCurrentMode().then((value) => {
+getCurrentMode('.display-border').then((value) => {
+  if(value) {
+    document.querySelector('#BorderField').value = "1"
+  } else {
+    document.querySelector('#BorderField').value = "0"
+  }
+})
+
+getCurrentMode('.display-tag').then((value) => {
   isOpenDiplayMode = value;
   if (isOpenDiplayMode) {
     document.querySelector('#bottom').style.display = 'block'
@@ -58,7 +66,6 @@ getCurrentMode().then((value) => {
 switchNode.addEventListener("click", function () {
   if (isOpenDiplayMode) {
     document.querySelector('#bottom').style.display = 'none'
-  
     sendMessageToContentScript(
       { cmd: "closeDisplayMode", value: 'display-tag' },
       function (response) {}
