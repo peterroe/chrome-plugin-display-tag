@@ -1,11 +1,12 @@
 ﻿// 接收来自后台的消息
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
 {
-  if(request.cmd == 'openDisplayMode') {
-    document.body.classList.add('display-tag');
+  const { cmd, value } = request
+  if(cmd == 'openDisplayMode') {
+    document.body.classList.add(value);
     sendResponse();
-  } else if(request.cmd == 'closeDisplayMode') {
-    document.body.classList.remove('display-tag');
+  } else if(cmd == 'closeDisplayMode') {
+    document.body.classList.remove(value);
     sendResponse();
   } else {
     sendResponse(

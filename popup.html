@@ -64,26 +64,31 @@
 		#tag {
 			width: 100px;
 		}
-		input[type='submit'],form,fieldset {
+		input,form,fieldset {
 			margin-bottom: 0 !important;
 		}
 		textarea {
 			resize: none
 		}
-		.repo {
+		#repo {
 			margin-top: 7px;
 			margin-right: 5px;
 			float: right;
+			cursor: s;
+		}
+		.checkbox-wrapper {
+			display: inline-flex;
+			align-items: center;
+			margin-right: 10px;
+		}
+		.checkbox-label {
+			margin-right: 6px;
 		}
 	</style>
 </head>
 <body>
-	
 	<div id="name">Display Tag <sub>v1.1.0</sub>
-		<a href="https://github.com/peterroe/chrome-plugin-display-tag">
-			<img src="https://api.iconify.design/akar-icons:github-fill
-		.svg?color=%23" class="repo" width="20"/> 
-		</a>
+			<img src="https://api.iconify.design/akar-icons:github-fill.svg?color=%23" id="repo" width="20"/> 
 	</div>
 	<div id="app">
 		<input class="switch-component" type="checkbox" id="switch"/>
@@ -91,14 +96,27 @@
 	<div id="bottom">
 		<form>
 			<fieldset>
-				<label for="ageRangeField">Border</label>
-				<select id="ageRangeField">
+				<label>Border</label>
+				<select id="BorderField">
 					<option value="Yes">Yes</option>
 					<option value="No">No</option>
 				</select>
-				<label for="commentField">Excluded tags</label>
-				<textarea placeholder="p,div,a" id="commentField"></textarea>
-				<input class="button-primary float-right button-outline" type="submit" value="Save">
+				<label>Excluded tags</label>
+				<div>
+					<div class="checkbox-wrapper">
+						<span class="checkbox-label">div</span>
+						<input id="display-div" type="checkbox" />
+					</div>
+					<div class="checkbox-wrapper">
+						<span class="checkbox-label">span</span>
+						<input id="display-span" type="checkbox" />
+					</div>
+					<div class="checkbox-wrapper">
+						<span class="checkbox-label">a</span>
+						<input id="display-a" type="checkbox" />
+					</div>
+				</div>
+				<!-- <input id="save" class="button-primary float-right button-outline" type="button" value="Save"> -->
 			</fieldset>
 		</form>
 		

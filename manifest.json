@@ -32,6 +32,7 @@
 		"contextMenus",
 		"tabs", 
 		"notifications",
+		"storage",
 		"webRequest",
 		"scripting",
 		"activeTab"

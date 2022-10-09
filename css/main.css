@@ -734,5 +734,10 @@
 .display-tag *::after {
   color: #008000;
   background-color: #fff;
+  border: 1px solid #000;
   border-radius: 3px;
+}
+.display-border *::before,
+.display-border *::after {
+  border: none;
 }
