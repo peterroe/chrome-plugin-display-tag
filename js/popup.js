@@ -197,7 +197,3 @@ chrome.storage.local.get(tags, function(items) {
       }
   })
 });
-
-window.addEventListener('beforeunload', () => {
-  alert(345)
-})
