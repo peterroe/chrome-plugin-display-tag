@@ -32,7 +32,7 @@ getCurrentMode().then((value) => {
   if (isOpenDiplayMode) {
     switchNode.checked = true;
   }
-});
+})
 
 switchNode.addEventListener("click", function () {
   if (isOpenDiplayMode) {
@@ -58,3 +58,8 @@ switchNode.addEventListener("click", function () {
     })
   }
 });
+
+
+document.querySelector('.repo')?.addEventListener('click', () => {
+	chrome.tabs.create({url: 'https://github.com/peterroe/chrome-plugin-display-tag'});
+})
