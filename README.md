@@ -20,11 +20,10 @@ $ git clone https://github.com/peterroe/chrome-plugin-display-tag.git
 
 ![img](./demo.gif)
 
-### Snapshot
+### Changelog
 
-![img](before.png)
+![img](v2.png)
 
-![img](after.png)
 
  
 
