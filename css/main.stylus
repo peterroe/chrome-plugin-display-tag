@@ -11,5 +11,5 @@ list = a abbr acronym address applet area article aside audio b base basefont bd
     *::before, *::after
         color green
         background-color #fff
-        border 1px solid #000
+        // border 1px solid #000
         border-radius: 3px
