@@ -1,7 +1,7 @@
 {
 	"manifest_version": 3,
 	"name": "Display tag",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Display the tag name of the element in the browser.",
 	"icons":
 	{

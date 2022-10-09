@@ -35,9 +35,9 @@ const switchNode = document.querySelector("#switch");
 
 let isOpenDiplayMode;
 
-const tags = ['div', 'span', 'a']
+const tags = ['div', 'span', 'a', 'li']
 
-let initState = ['', '', '']
+let initState = ['', '', '','']
 
 getCurrentMode('.display-border').then((value) => {
   if(value) {

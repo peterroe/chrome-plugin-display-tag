@@ -18,7 +18,6 @@ $ git clone https://github.com/peterroe/chrome-plugin-display-tag.git
 
 ### Example
 
-
 ![img](./demo.gif)
 
 ### Snapshot
